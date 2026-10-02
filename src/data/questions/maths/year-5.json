@@ -1,0 +1,24 @@
+[
+  {
+    "id": "maths-y5-001",
+    "subject": "maths",
+    "keyStage": "KS2",
+    "year": 5,
+    "topic": "Fractions",
+    "question": "What is 3/4 of 20?",
+    "options": ["5", "12", "15", "16"],
+    "correctIndex": 2,
+    "explanation": "Divide 20 by 4 to get 5, then multiply by 3 to get 15."
+  },
+  {
+    "id": "maths-y5-002",
+    "subject": "maths",
+    "keyStage": "KS2",
+    "year": 5,
+    "topic": "Place value",
+    "question": "Which number is the same as 3,000 + 400 + 5?",
+    "options": ["345", "3,405", "3,450", "34,005"],
+    "correctIndex": 1,
+    "explanation": "3,000 + 400 + 5 makes 3,405. There are no tens, so the tens digit is 0."
+  }
+]
