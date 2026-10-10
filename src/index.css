@@ -10,6 +10,7 @@
   --colour-correct: #15803d;
   --colour-wrong: #b45309;
   --tap-target: 3rem;
+  color-scheme: light;
   font-family:
     system-ui,
     -apple-system,
@@ -22,8 +23,9 @@
   background: var(--colour-bg);
 }
 
+/* Dark theme: follows the device setting until the learner picks a theme. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme]) {
     --colour-bg: #111827;
     --colour-text: #f3f4f6;
     --colour-primary: #a5b4fc;
@@ -34,7 +36,26 @@
     --colour-hero-end: #312e81;
     --colour-correct: #4ade80;
     --colour-wrong: #fbbf24;
+    color-scheme: dark;
   }
+}
+
+:root[data-theme='dark'] {
+  --colour-bg: #111827;
+  --colour-text: #f3f4f6;
+  --colour-primary: #a5b4fc;
+  --colour-primary-text: #111827;
+  --colour-surface: #1f2937;
+  --colour-border: #9ca3af;
+  --colour-tint: #1e1b4b;
+  --colour-hero-end: #312e81;
+  --colour-correct: #4ade80;
+  --colour-wrong: #fbbf24;
+  color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
 }
 
 * {
@@ -448,5 +469,66 @@ a.year-card:hover {
 @media (min-width: 70rem) {
   .feature-list {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Theme switch */
+.site-header-inner {
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  min-height: var(--tap-target);
+  padding: 0 0.75rem;
+  border: 2px solid var(--colour-border);
+  border-radius: 999px;
+  background: var(--colour-bg);
+  color: var(--colour-text);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.theme-toggle-track {
+  position: relative;
+  width: 2.75rem;
+  height: 1.5rem;
+  border-radius: 999px;
+  background: var(--colour-border);
+}
+
+.theme-toggle-thumb {
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  display: grid;
+  place-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: var(--colour-bg);
+  color: var(--colour-text);
+}
+
+.theme-toggle[aria-checked='true'] .theme-toggle-track {
+  background: var(--colour-primary);
+}
+
+.theme-toggle[aria-checked='true'] .theme-toggle-thumb {
+  transform: translateX(1.25rem);
+}
+
+.theme-toggle-thumb svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .theme-toggle-thumb {
+    transition: transform 0.15s ease;
   }
 }

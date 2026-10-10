@@ -1,4 +1,5 @@
 import { Link, Outlet } from 'react-router-dom';
+import { ThemeToggle } from './ThemeToggle';
 
 export function Layout() {
   return (
@@ -14,6 +15,7 @@ export function Layout() {
             </span>
             BrightBrain
           </Link>
+          <ThemeToggle />
         </div>
       </header>
       <main id="main" tabIndex={-1}>
