@@ -1,0 +1,57 @@
+[
+  {
+    "id": "maths-y8-001",
+    "subject": "maths",
+    "keyStage": "KS3",
+    "year": 8,
+    "topic": "Solving equations",
+    "question": "Solve 3x + 7 = 25. What is the value of x?",
+    "options": ["4", "6", "9", "18"],
+    "correctIndex": 1,
+    "explanation": "Take 7 from both sides to get 3x = 18, then divide both sides by 3 to get x = 6."
+  },
+  {
+    "id": "maths-y8-002",
+    "subject": "maths",
+    "keyStage": "KS3",
+    "year": 8,
+    "topic": "Ratio and proportion",
+    "question": "£60 is shared between Asha and Ben in the ratio 2 : 3. How much does Ben get?",
+    "options": ["£24", "£30", "£36", "£40"],
+    "correctIndex": 2,
+    "explanation": "There are 2 + 3 = 5 equal parts, so each part is £60 ÷ 5 = £12. Ben gets 3 parts, which is 3 × £12 = £36."
+  },
+  {
+    "id": "maths-y8-003",
+    "subject": "maths",
+    "keyStage": "KS3",
+    "year": 8,
+    "topic": "Percentages",
+    "question": "A coat costs £80. In a sale the price is reduced by 15%. What is the sale price?",
+    "options": ["£65", "£68", "£72", "£95"],
+    "correctIndex": 1,
+    "explanation": "10% of £80 is £8 and 5% is £4, so 15% is £12. Take this away from £80 to get £68."
+  },
+  {
+    "id": "maths-y8-004",
+    "subject": "maths",
+    "keyStage": "KS3",
+    "year": 8,
+    "topic": "Pythagoras' theorem",
+    "question": "A right-angled triangle has shorter sides of 6 cm and 8 cm. How long is the hypotenuse?",
+    "options": ["10 cm", "14 cm", "28 cm", "48 cm"],
+    "correctIndex": 0,
+    "explanation": "Square the two shorter sides and add them: 36 + 64 = 100. The hypotenuse is the square root of 100, which is 10 cm."
+  },
+  {
+    "id": "maths-y8-005",
+    "subject": "maths",
+    "keyStage": "KS3",
+    "year": 8,
+    "topic": "Sequences",
+    "question": "What is the nth term of the sequence 5, 9, 13, 17, ...?",
+    "options": ["n + 4", "4n + 1", "4n + 5", "5n − 1"],
+    "correctIndex": 1,
+    "explanation": "The sequence goes up by 4 each time, so the rule starts with 4n. Now 4 × 1 = 4, and we need 5, so add 1. The nth term is 4n + 1."
+  }
+]
